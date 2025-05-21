@@ -135,7 +135,7 @@ export async function migrateIconsFile(
   const sourceLibraryImport = ICON_LIBRARIES[sourceLibrary]?.import
   const targetLibraryImport = ICON_LIBRARIES[targetLibrary]?.import
 
-  const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"))
+  const dir = await fs.mkdtemp(path.join(tmpdir(), "creight-"))
   const project = new Project({
     compilerOptions: {},
   })

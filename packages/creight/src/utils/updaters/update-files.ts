@@ -412,7 +412,7 @@ async function resolveImports(filePaths: string[], config: Config) {
 
     const content = await fs.readFile(resolvedPath, "utf-8")
 
-    const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"))
+    const dir = await fs.mkdtemp(path.join(tmpdir(), "creight-"))
     const sourceFile = project.createSourceFile(
       path.join(dir, basename(resolvedPath)),
       content,

@@ -265,7 +265,7 @@ function addTailwindConfigPlugin(
 }
 
 export async function _createSourceFile(input: string, config: Config | null) {
-  const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"))
+  const dir = await fs.mkdtemp(path.join(tmpdir(), "creight-"))
   const resolvedPath =
     config?.resolvedPaths?.tailwindConfig || "tailwind.config.ts"
   const tempFile = path.join(dir, `shadcn-${path.basename(resolvedPath)}`)

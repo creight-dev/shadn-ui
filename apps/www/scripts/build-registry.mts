@@ -37,7 +37,7 @@ const project = new Project({
 })
 
 async function createTempSourceFile(filename: string) {
-  const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"))
+  const dir = await fs.mkdtemp(path.join(tmpdir(), "creight-"))
   return path.join(dir, filename)
 }
 
@@ -378,7 +378,7 @@ async function buildStyles(registry: Registry) {
 
       const payload = registryItemSchema.safeParse({
         $schema: "https://ui.shadcn.com/schema/registry-item.json",
-        author: "shadcn (https://ui.shadcn.com)",
+        author: "creight (https://ui.shadcn.com)",
         ...item,
         files,
       })

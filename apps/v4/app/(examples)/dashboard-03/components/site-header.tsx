@@ -91,9 +91,9 @@ export function SiteHeader() {
           <ModeToggle />
           <NavUser
             user={{
-              name: "shadcn",
+              name: "creight",
               email: "m@example.com",
-              avatar: "/avatars/shadcn.jpg",
+              avatar: "/avatars/creight.jpg",
             }}
           />
         </div>

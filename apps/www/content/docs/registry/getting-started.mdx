@@ -23,7 +23,7 @@ Create a `registry.json` file in the root of your project. Your project can be a
 
 ```json title="registry.json" showLineNumbers
 {
-  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "$schema": "https://ui.creight.com/schema/registry.json",
   "name": "acme",
   "homepage": "https://acme.com",
   "items": [
@@ -85,7 +85,7 @@ To add your component to the registry, you need to add your component definition
 
 ```json title="registry.json" showLineNumbers {6-17}
 {
-  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "$schema": "https://ui.creight.com/schema/registry.json",
   "name": "acme",
   "homepage": "https://acme.com",
   "items": [
@@ -132,7 +132,7 @@ Add a `registry:build` script to your `package.json` file.
 ```json title="package.json" showLineNumbers
 {
   "scripts": {
-    "registry:build": "shadcn build"
+    "registry:build": "creight build"
   }
 }
 ```
@@ -197,5 +197,5 @@ Here are some guidelines to follow when building components for a registry.
 To install a registry item using the `shadcn` CLI, use the `add` command followed by the URL of the registry item.
 
 ```bash
-npx shadcn@latest add http://localhost:3000/r/hello-world.json
+npx creight@latest add http://localhost:3000/r/hello-world.json
 ```

@@ -1090,7 +1090,7 @@ describe("toAliasedImport", () => {
     )
   })
 
-  test("should support @shadcn alias prefix", () => {
+  test("should support @creight alias prefix", () => {
     const filePath = "components/ui/button.tsx"
     const config = {
       resolvedPaths: {
@@ -1099,15 +1099,15 @@ describe("toAliasedImport", () => {
         ui: "/foo/bar/components/ui",
       },
       aliases: {
-        components: "@shadcn/components",
-        ui: "@shadcn/ui",
+        components: "@creight/components",
+        ui: "@creight/ui",
       },
     }
     const projectInfo = {
-      aliasPrefix: "@shadcn",
+      aliasPrefix: "@creight",
     }
     expect(toAliasedImport(filePath, config, projectInfo)).toBe(
-      "@shadcn/ui/button"
+      "@creight/ui/button"
     )
   })
 

@@ -5,7 +5,7 @@ function getInvoker() {
   const args = process.argv.slice(2)
   const env = process.env
   const npmExecPath = env.npm_execpath || ""
-  const packageName = "shadcn@latest"
+  const packageName = "creight@latest"
 
   if (npmExecPath.includes("pnpm")) {
     return `pnpm dlx ${packageName}${args.length ? ` ${args.join(" ")}` : ""}`
@@ -21,7 +21,7 @@ function getInvoker() {
 const main = async () => {
   console.log(
     chalk.yellow(
-      "The 'shadcn-ui' package is deprecated. Please use the 'shadcn' package instead:"
+      "The 'creight-ui' package is deprecated. Please use the 'creight' package instead:"
     )
   )
   console.log("")

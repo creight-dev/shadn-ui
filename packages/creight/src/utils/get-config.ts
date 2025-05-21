@@ -222,6 +222,16 @@ export function findCommonRoot(cwd: string, resolvedPath: string) {
 
 // TODO: Cache this call.
 export async function getTargetStyleFromConfig(cwd: string, fallback: string) {
-  const projectInfo = await getProjectInfo(cwd)
-  return projectInfo?.tailwindVersion === "v4" ? "new-york-v4" : fallback
+  // Check if REGISTRY_URL is set to a custom value
+  const isCustomRegistry = process.env.REGISTRY_URL &&
+    !process.env.REGISTRY_URL.includes('ui.shadcn.com');
+
+  // If using a custom registry, always respect the style from components.json (fallback)
+  if (isCustomRegistry) {
+    return fallback;
+  }
+
+  // Otherwise, use the original logic for official shadcn registry
+  const projectInfo = await getProjectInfo(cwd);
+  return projectInfo?.tailwindVersion === "v4" ? "new-york-v4" : fallback;
 }
